@@ -74,7 +74,7 @@ systemGetElapsed = allocaBytesAligned sofTimespec 8 $ \ptr -> do
   toElapsed :: CTime -> Elapsed
   toElapsed (CTime sec) = Elapsed $ Seconds (fromIntegral sec)
 
-foreign import ccall unsafe "hourglass_clock_calendar"
+foreign import ccall unsafe "time_hourglass_clock_calendar"
   c_clock_get :: Ptr CLong -> IO ()
 
 foreign import ccall unsafe "gmtime_r"

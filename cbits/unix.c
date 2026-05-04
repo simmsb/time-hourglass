@@ -13,7 +13,7 @@
  * we ignore errors as it's very very unlikely considering the hardcoded ID
  * and the fact that haskell should call this code.
  */
-void hourglass_clock_calendar(struct timespec *timespec)
+void time_hourglass_clock_calendar(struct timespec *timespec)
 {
 #if defined __MACH__ && !defined __GNU__
 	clock_serv_t cclock;
